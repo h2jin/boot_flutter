@@ -1,6 +1,7 @@
 void main(List<String> args) {
   CheeseBurger ch = CheeseBurger("치즈버거");
   print(ch.name);
+  
 } // end of main
 
 class Burger {
