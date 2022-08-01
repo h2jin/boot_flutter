@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_airbnb/size.dart';
-import 'package:flutter_airbnb/styles.dart';
+import 'package:flutter_airbnb_ex/size.dart';
+import 'package:flutter_airbnb_ex/styles.dart';
 
 class HomeBodyPopularItem extends StatelessWidget {
   HomeBodyPopularItem({Key? key, required this.id}) : super(key: key);
@@ -14,10 +14,8 @@ class HomeBodyPopularItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // 인기 아이템은 전체 화면의 70%의 1/3 만큼의 사이즈를 가질 수 있도록 하고, 사이즈 -5 만큼의 크기를 가지게 설계한다.
     double popularItemWidth = getBodyWidth(context) / 3 - 5;
     return Container(
-      // 화면이 줄어들 때 너무 작게 줄어드는 것을 방지하기 위해 최소제약 조건을 잡아준다.
       constraints: BoxConstraints(minWidth: 420),
       child: SizedBox(
         width: popularItemWidth,
@@ -43,9 +41,7 @@ class HomeBodyPopularItem extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
-        SizedBox(
-          height: gap_s,
-        )
+        SizedBox(height: gap_s),
       ],
     );
   }
@@ -62,7 +58,7 @@ class HomeBodyPopularItem extends StatelessWidget {
             Icon(Icons.star, color: Colors.redAccent),
           ],
         ),
-        SizedBox(height: gap_s),
+        SizedBox(height: gap_s)
       ],
     );
   }
@@ -71,14 +67,12 @@ class HomeBodyPopularItem extends StatelessWidget {
     return Column(
       children: [
         Text(
-          "깔끔하고 다 갖춰져있어서 좋아요. 위치도 완전 좋아용. 다들 여기 살고 싶다고ㅋㅋㅋㅋㅋ 화장실도 3개예요!!! 5명이서 씻는 것도 전혀 불편함 없이 좋았어요^^ 이불도 포근하고 좋습니다 ㅎㅎㅎㅎfrfgrgdsfgsd",
+          "깔끔하고 다 갖춰져있어서 좋아요. 위치도 완전 좋아용. 다들 여기 살고싶다고ㅋㅋㅋ 화장실도 3개예요!!! 5명이서 씻는 것도 전혀 불편함없이 좋았어요^^ 이불도 포근하고 좋습니다 ㅎㅎㅎ fsdfs",
           style: body1(),
           maxLines: 3,
           overflow: TextOverflow.ellipsis,
         ),
-        SizedBox(
-          height: gap_s,
-        )
+        SizedBox(height: gap_s)
       ],
     );
   }
