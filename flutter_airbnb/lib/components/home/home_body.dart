@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_airbnb/components/home/home_body_banner.dart';
+import 'package:flutter_airbnb/components/home/home_body_popular.dart';
 import 'package:flutter_airbnb/size.dart';
 
 class HomeBody extends StatelessWidget {
@@ -8,17 +10,17 @@ class HomeBody extends StatelessWidget {
   Widget build(BuildContext context) {
     double bodyWidth = getBodyWidth(context);
     print("bodyWidth 70% : ${bodyWidth}");
-    return SizedBox(
-      width: bodyWidth,
-      child: Column(
-        children: [
-          Container(
-            color: Colors.yellow,
-          ),
-          Container(
-            color: Colors.purple,
-          ),
-        ],
+    return Align(
+      // 정렬을 센터로 지정
+      child: SizedBox(
+        width: bodyWidth,
+        child: Column(
+          children: [
+            HomeBodyBanner(),
+            HomeBodyPopular(),
+            SizedBox(height: gap_l)
+          ],
+        ),
       ),
     );
   }
