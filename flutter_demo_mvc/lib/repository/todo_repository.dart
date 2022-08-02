@@ -70,7 +70,6 @@ class TodoRepository implements Repository {
       Map<String, dynamic> result = json.decode(response.body);
       return resData = result.toString();
     });
-
     return resData;
   }
 }
