@@ -10,7 +10,10 @@ class FriendScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text('친구'),
+        title: Text(
+          '친구',
+          style: TextStyle(color: Colors.black, fontSize: 15),
+        ),
       ),
       body: Column(
         children: [
