@@ -9,6 +9,11 @@ TextTheme textTheme() {
       fontWeight: FontWeight.bold,
     ),
     headline2: GoogleFonts.openSans(
+      fontSize: 16.0,
+      color: Colors.black,
+      fontWeight: FontWeight.bold,
+    ),
+    headline3: GoogleFonts.openSans(
       fontSize: 14.0,
       color: Colors.black,
       fontWeight: FontWeight.bold,
